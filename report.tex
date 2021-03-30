@@ -10,10 +10,10 @@
 % License for the specific language governing permissions and limitations under
 % the License.
 
-\documentclass[10pt, oneside]{report} % Set to `article` for smaller reports (need to use chapters in report, chapters aren't available for articles)
+\documentclass[10pt, oneside]{article} % Set to `report` for larger reports (you can use chapters in report, chapters aren't available for articles)
 
 % PACKAGE SET UP (FOR THOSE WITHOUT OPTIONS)
-\usepackage{blindtext, blindtext, wrapfig, colortbl, dirtytalk, wrapfig, subcaption, caption, amsmath, graphicx, cmbright, csquotes, enumitem, mwe}
+\usepackage{blindtext, blindtext, wrapfig, colortbl, dirtytalk, wrapfig, subcaption, caption, amsmath, graphicx, csquotes, enumitem, mwe}
 
 % PACKAGE SET UP (FOR THOSE WITH OPTIONS)
 \usepackage[ampersand]{easylist} % To avoid annoying `\item{}` nomenclature, use `&` within an easylist environment
@@ -42,6 +42,7 @@
 \graphicspath{{./figs/}} % Sets graphic path to `/figs` folder
 \setlength\parindent{0cm} % Removes indent at start of paragraph
 \setlength\arrayrulewidth{1pt} % Table seperators are wider
+\usepackage{cmbright} % Comment out to use serif font
 
 
 \begin{document}
