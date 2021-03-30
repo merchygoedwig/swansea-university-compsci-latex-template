@@ -5,7 +5,6 @@ compile_pdf:
   image: timnn/texlive
   script:
     - pdflatex report.tex
-    - bibtex bibliography
     - pdflatex report.tex
   artifacts:
     paths:
