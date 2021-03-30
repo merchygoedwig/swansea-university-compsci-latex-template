@@ -1,0 +1,22 @@
+# GitLab CI/CD script to compile dissertation files, provided by https://www.vipinajayakumar.com/continuous-integration-of-latex-projects-with-gitlab-pages.html
+
+compile_pdf:
+  stage: build
+  image: timnn/texlive
+  script:
+    - pdflatex dissertation.tex
+    - pdflatex dissertation.tex
+  artifacts:
+    paths:
+      - dissertation.pdf
+
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - cp dissertation.pdf public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
