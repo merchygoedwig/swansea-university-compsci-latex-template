@@ -4,17 +4,18 @@ compile_pdf:
   stage: build
   image: timnn/texlive
   script:
-    - pdflatex dissertation.tex
-    - pdflatex dissertation.tex
+    - pdflatex report.tex
+    - bibtex bibliography
+    - pdflatex report.tex
   artifacts:
     paths:
-      - dissertation.pdf
+      - report.pdf
 
 pages:
   stage: deploy
   script:
     - mkdir public
-    - cp dissertation.pdf public
+    - cp report.pdf public
   artifacts:
     paths:
       - public
